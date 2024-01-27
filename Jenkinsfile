@@ -28,6 +28,15 @@ pipeline {
                 
             }
         }
+         stage('docker registry') {
+            steps {
+           // This step should not normally be used in your script. Consult the inline help for details.
+withDockerRegistry(credentialsId: 'dockerid', url: 'https://hub.docker.com/repositories/sikindharbasha') {
+  sh 'docker push sikindharbasha/myapplication:latest'
+}
+                
+            }
+        }
        
     }
 }
