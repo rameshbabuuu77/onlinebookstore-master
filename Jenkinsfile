@@ -24,6 +24,7 @@ pipeline {
             steps {
             sh 'docker build -t ashokimage .'
                 sh 'docker images'
+                sh 'docker tag ashokimage sikindharbasha/myapplication:latest'
                 
             }
         }
