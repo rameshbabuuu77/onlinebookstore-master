@@ -1,7 +1,8 @@
 pipeline {
     agent any
-    tools
-    maven 'maven'
+    tools{
+        maven 'maven'
+    }   
     stages {
         stage('clone the code') {
             steps {
